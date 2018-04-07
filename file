@@ -1,0 +1,13 @@
+#include <unistd.h>
+
+read(file, buf, bufsize)
+write(file, buf, bufsize)
+
+fgets(buf, bufsize, fd)
+
+#include <stdio.h>
+printf
+getc
+putc
+
+
