@@ -1,0 +1,221 @@
+# POSIX is a familiy of standards 
+
+<assert.h>
+verify program assertion
+
+<complex.h>
+complex arithmetic support
+
+<ctype.h>
+character classification and mapping support
+
+<errno.h>
+error code
+
+<fenv.h>
+floating point environment
+
+<float.h>
+floating point constants and characteristics
+
+<inttypes.h>
+integer type format conversion
+
+<iso646.h>
+macros for assignment, relational ,and unary operators
+
+<limits.h>
+implementation constants
+
+<locale.h>
+locale categories and related definitions
+
+<math.h>
+mathematical function and type declarations and constants
+
+<setjmp.h>
+nonlocal goto
+
+<stdarg.h>
+variable argument lists
+
+<stdbool.h>
+Boolean type and values
+
+<stddef.h>
+standard definitions
+
+<stdint.h>
+integer types
+
+<stdlib.h>
+utility functions
+
+<string.h>
+string operations
+
+<tgmath.h>
+type generic math macros
+
+<time.h>
+time and date
+
+<wchar.h>
+<wctype.h>
+
+# 2008 POSIX
+<aio.h>
+asynchronous IO
+
+<cpio.h>
+cpio archive values
+
+<dirent.h>
+directory entries
+
+<dlfcn.h>
+dynamic linking
+
+<fcntl.h>
+file control
+
+<fnmatch.h>
+filename-matching types
+
+<glob.h>
+group file
+
+<iconv.h>
+codeset conversion utility
+
+<langinfo.h>
+
+<monetary.h>
+monetary types and functions
+
+<netdb.h>
+network database operations
+
+<nl_types.h>
+message catalogs
+
+<poll.h>
+poll function
+
+<pthread.h>
+threads
+
+<pwd.h>
+password file
+
+<regex.h>
+regular expressions
+
+<sched.h>
+execution scheduling
+
+<semaphore.h>
+semaphores
+
+<strings.h>
+string operations
+
+<tar.h>
+tar archive values
+
+<termios.h>
+terminal IO
+
+<unistd.h>
+symbolic constants
+
+<wordexp.h>
+word-expansion definitions
+
+<arpa/inet.h>
+Internet definitions
+
+<net/if.h>
+socket local interfaces
+<
+<netinet/in.h>
+Internet  address family
+
+<netinet/tcp.h>
+TCP definitions
+
+<sys/man.h>
+memory management declarations
+
+<sys/select.h>
+select function
+
+<sys/socket.h>
+socket interfaces
+
+<sys/stat.h>
+file status
+
+<sys/statvfs.h>
+file system information
+
+<sys/times.h>
+process times
+
+<sys/types.h>
+primitive system data types
+
+<sys/un.h>
+UNIX domain socket definitions
+
+<sys/utsname.h>
+system name
+
+<sys/wait.h>
+process control
+
+<fmtmsg.h>
+message display structures
+
+<ftw.h>
+free tree walking 
+
+<libgen.h>
+pathname management functions
+
+<ndbm.h>
+database operations
+
+<search.h>
+search tables
+
+<syslog.h>
+system error logging
+
+<utmpx.h>
+user accounting database
+
+<sys/ipc.h>
+IPC
+
+<sys/msg.h>
+XSI message queues
+
+<sys/resource.h>
+resource operations
+
+<sys/sem.h>
+XSI semaphores
+
+<sys/shm.h>
+XSI shared memory
+
+<sys/time.h>
+time types
+
+<sys/uio.h>
+vector IO operations
+
+
+
+
