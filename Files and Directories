@@ -1,0 +1,123 @@
+stat
+fstat
+lstat
+fstatat
+
+struct stat {
+  mode_t st_mode;
+  ino_t st_ino;
+  dev_t st_dev;
+  dev_t st_rdev;
+  nlink_t st_nlink;
+  uid_t st_uid;
+  git_t st_gid;
+  off_t st_size;
+  struct timespec st_atim;
+  struct timespec st_mtim;
+  struct timespec st_ctim;
+  blksize_t st_blksize;
+  blkcnt_t st_blocks;
+}
+
+File Type:
+regular file
+directory file
+block
+character
+FIFO
+socket
+symbolic link
+
+S_ISREG
+S_ISDIR
+S_ISCHR
+S_ISBLK
+S_ISFIFO
+S_ISSOCK
+S_ISLNK
+
+File Access Permissions:
+S_IRUSR
+S_IWUSR
+S_IXUSR
+S_IRGRP
+S_IWGRP
+S_IXGRP
+S_IROTH
+S_IWOTH
+S_IXOTH
+
+access
+faccessat
+
+umask
+
+<sys/stat.h>
+chmod
+fchmod
+fchmodat
+
+<unistd.h>
+chown
+fchown
+fchownat
+lchown
+
+int truncate
+int ftruncate
+
+
+int link
+int linkat
+
+int unlink
+int unlinkat
+
+<stdio.h>
+rename
+renameat
+
+<unistd.h>
+int  symlink
+int symlinkat
+
+readlink
+readlinkat
+
+#include <sys/stat.h>
+int futimens(int fd, const struct timespec time[2]);
+int utimensat(int fd, const char *path, const struct timespec time[2], int flag);
+
+#include <sys/time.h>
+int utimes(const char *pathname, const struct timeval times[2]);
+
+
+#include <sys/stat.h>
+int mkdir
+int mkdirat
+
+#include <unistd.h>
+int rmdir
+
+#include <dirent.h>
+DIR *opendir(const char *pathname);
+DIR *fdopendir(int fd);
+
+struct dirent *readdir(DIR *dp);
+
+void rewinddir(DIR *dp);
+int closedir(DIR *dp);
+
+long telldir(DIR *dp);
+void seekdir(DIR *dp, long loc);
+
+#include <unistd.h>
+int chdir(const char *pathname);
+int fchdir(int fd);
+
+
+
+
+
+
+
