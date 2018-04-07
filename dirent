@@ -1,0 +1,5 @@
+#include <dirent.h>
+
+opendir(char *);
+readdir(DIR *); // return a struct dirent 
+closedir(DIR *);
