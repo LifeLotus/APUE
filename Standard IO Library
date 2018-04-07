@@ -1,0 +1,104 @@
+# 1 Streams
+#include <stdio.h>
+#include <wchar.h>
+
+int fwide(FILE *fp, int mode);
+
+# 2 Standard input, output error
+STDIN_FILENO
+STDOUT_FILENO
+STDERR_FILENO
+
+# 3 Buffering
+void setbuf(FILE *fp, char *buf);
+int setvbuf(FILE *fp, char *buf, int mode, size_t size);
+
+int fflush(FILE *fp);
+
+# 4 Opening a Stream
+#include <stdio.h>
+FILE *fopen(const char *pathname, const char *type);
+FILE *freopen(const char *pathname, const char *type, FILE *fp);
+FILE *fdopen(int fd, const char *type);
+
+int fclose(FILE *fp);
+
+# 5 Reading and Writing
+#include <stdio.h>
+int getc(FILE *fp);
+int fgetc(FILE *fp);
+int getchar(void);
+
+getchar = getc(stdio)
+
+int ferror(FILE *fp);
+int feof(FILE *fp);
+void clearerr(FILE *fp);
+
+int ungetc(int c, FILE *fp);
+
+int putc(int c, FILE *fp);
+int fputc(int c, FILE *fp);
+int putchar(int c);
+
+# 6 Line at a Time
+char *fgets(char *buf, int n, FILE *fp);
+char *gets(char *buf);
+
+int fputs(const char *str, FILE*fp);
+int puts(const char *str);
+
+# 7 Binary IO
+size_t fread(void *ptr, size_t size, size_t nobj, FILE *fp);
+size_t fwrite(const void *ptr, size_t size, size_t nobj, FILE *fp);
+
+# 8 Position a Stream
+long ftell(FILE *fp);
+int fseek(FILE *fp, long offset, int whence);
+void rewind(FILE *fp);
+
+off_t ftello(FILE *fp);
+int fseeko(FILE *fp, off_t offset, int whence);
+
+int fgetpos(FILE *fp, fpos_t *pos);
+int fsetpos(FILE *fp, const fpos_t *pos);
+
+# 9 Formatted IO
+int printf
+int fprintf
+int dprintf
+int sprintf
+int snprintf
+
+int vprintf
+int vfprintf
+int vdprintf
+int vsprintf
+int vsnprintf
+
+int scanf
+int fscanf
+int sscanf
+
+int vscanf
+int vfscanf
+int vsscanf
+
+# 10 
+int fileno(FILE *fp);
+
+# 11
+char *tmpnam(char *ptr);
+FILE *tmpfile(void);
+
+#include <stdlib.h>
+char *mkdtemp(char *template);
+int mkstemp(char *template);
+
+# 12 Memory Streams
+#include <stdio.h>
+FILE *fmemopen(void *buf, size_t size, const char *type);
+FILE *open_memstream(char **bufp, size_t *sizep);
+FILE *open_wmemstream(wchar_t **bufp, size_t *sizep);
+
+
