@@ -1,0 +1,42 @@
+# 1 exit
+#include <stdlib.h>
+#include <unistd.h>
+void exit(int );
+void _exit(int);
+void _Exit(int);
+
+int atexit(void (*func)(void)); # exit would call func
+
+# 2 Arguments
+
+# 3 Enviroment List
+extern char **environ;
+
+int main(int argc, char *argv[], char *envp[]);
+
+# 4 Memory Layout of a C Program
+High Address
+  1 command line argument and enviroment variables
+  2 stack
+  3 heap
+  4 uninitialized data (bss) would initialized to 0 by exec
+  5 initialized data
+  6 text
+Low Address
+
+# 5 Shared Libraries
+gcc -static hello.c
+gcc hello.c # would use shared libraries
+
+# 6 Memory Allocation
+#include <stdlib.h>
+void *malloc(size_t size);
+void *calloc(size_t nobj, size_t size);
+void *realloc(void *ptr, size_t newsize);
+void *free(void *ptr);
+
+# 7 setjmp and longjmp
+#include <setjmp.h>
+int setjmp(jmp_buf env);
+void longjmp(jmp_buf env, int val);
+
