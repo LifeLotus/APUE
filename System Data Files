@@ -1,0 +1,84 @@
+# 1 Password File
+struct passwd *getpwuid(uid_t uid);
+struct passwd *getpwnam(const char *name);
+
+#include <pwd.h>
+struct passwd *getpwent(void);
+void setpwent(void); # begin
+void endpwent(void); # end
+
+# example
+setpwent();
+while ((ptr = getpwent()) != NULL)
+    # do something
+endpwent();
+
+# 2 Shadow Password
+#include <shadow.h>
+struct spwd *getspnam(const char *name);
+struct spwd *getspent(void);
+void setspent(void);
+void endspent(void);
+
+# 3 Group File
+#include <grp.h>
+struct group *getgrgid(gid_t gid);
+struct group *getgrnam(const char *name);
+
+struct group *getgrent(void);
+void setgrent(void);
+void endgrent(void);
+
+# 4 System Identification
+#include <sys/utsname.h>
+int uname(struct utsname *name);
+
+struct utsname {
+  char sysname[];
+  char nodename[];
+  char release[];
+  char version[];
+  char machine[];
+};
+
+#include <unistd.h>
+int gethostname(char *name, int namelen);
+
+# 5 Time and Date Routines
+#include <time.h>
+time_t time(time_t *calptr);
+
+#include <sys/time.h>
+int clock_gettime(clockid_t clock_id, struct timespec *tsp);
+
+#include <sys/time.h>
+int clock_getres(clockid_t clock_id, struct timespec *tsp);
+
+#include <sys/time.h>
+int clock_settime(clockid_t clock_id, struct timespec *tsp);
+
+#include <sys/time.h>
+int gettimeofday(struct timeval *tp, void *tzp);
+
+timeval
+timespec
+time_t
+struct tm {
+  int tm_sec;
+  int tm_min;
+  int tm_hour;
+  int tm_mday;
+  int tm_mon;
+  int tm_year;
+  int tm_wday;
+  int tm_yday;
+  int tm_isdst;
+};
+
+#include <time.h>
+struct tm *gmtime(const time_t *calptr);
+struct tm *localtime(const time_t *calptr);
+
+#include <time.h>
+time_t mktime(struct tm *tmptr);
+
