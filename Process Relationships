@@ -1,0 +1,10 @@
+# 1 Terminal Logins
+
+# 2 Sessions 
+A Session is a collection of one or more process groups.
+
+The processes in a process group are usualy placed there by a shell pipeline.
+
+#include <unistd.h>
+pid_t setsid(void);
+
